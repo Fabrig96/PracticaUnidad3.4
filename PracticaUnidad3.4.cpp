@@ -22,8 +22,8 @@ int main() {
 
 	texture.loadFromFile("Unidad3_Assets/plataforma.jpg");
 
-	float SizeTx = texture.getSize().x;
-	float SizeTy = texture.getSize().y;
+	float SizeTx = (float)texture.getSize().x;
+	float SizeTy = (float)texture.getSize().y;
 
 	sprite_1.setTexture(texture);
 	sprite_2.setTexture(texture);
@@ -56,7 +56,8 @@ int main() {
 	sprite_5.setPosition(positionX * 9, sizeWindowY - (SizeTy * escalaY_5));
 	sprite_6.setPosition(positionX * 11, sizeWindowY - (SizeTy * escalaY_6));
 	sprite_7.setPosition(positionX * 13, sizeWindowY - (SizeTy * escalaY_7));
-	sprite_8.setPosition(positionX * 15, sizeWindowY - (SizeTy * escalaY_7)); //Sprite horizontal respecto a posición del último vertical
+	//Sprite horizontal respecto a posición del último vertical
+	sprite_8.setPosition(positionX * 15, sizeWindowY - (SizeTy * escalaY_7)); 
 
 	while (App.isOpen())
 	{
